@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Image Converter</string>
+    <string name="appTitle">Image Converter</string>
+    <string name="add_images">Add Images</string>
+    <string name="convert">Convert</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">No Images Yet</string>
+    <string name="empty_state_subtitle">Tap "Add Images" to get started with converting your photos</string>
+    <string name="empty_state_icon">Empty state illustration</string>
+
+    <!-- Accessibility -->
+    <string name="image_selected">Image selected</string>
+    <string name="remove_image">Remove image</string>
+    <string name="pdf_opener_button">PDF opener button</string>
+    <string name="pdf_list_viewer_button">PDF list Viewer button</string>
+</resources>
