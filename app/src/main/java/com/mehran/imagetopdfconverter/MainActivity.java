@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     final static int IMAGE_PICK_REQ = 100;
     RecyclerView rvImages;
+    ImageView ivPdfListActivity;
     Button btnAddImages, btnConvert;
     PicturesAdapter picturesAdapter;
     ArrayList<Picture> picturesList;
@@ -56,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
 
         init();
         setUpSwipe();
+
+        ivPdfListActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,PdfListActivity.class));
+            }
+        });
 
         btnAddImages.setOnClickListener(v -> {
             Intent imagePick = new Intent(Intent.ACTION_PICK);
@@ -93,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         picturesList = new ArrayList<>();
         btnConvert = findViewById(R.id.btnConvert);
         btnAddImages = findViewById(R.id.btnAddImages);
+        ivPdfListActivity = findViewById(R.id.ivPDFIcon);
         rvImages = findViewById(R.id.rvImages);
         progressIndicator = findViewById(R.id.progressIndicator);
 

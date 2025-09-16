@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImageToPDFConverter">
         <activity
+            android:name=".PdfListActivity"
+            android:exported="false" />
+        <activity
             android:name=".PdfViewActivity"
             android:exported="false" />
         <activity
