@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
     final static int IMAGE_PICK_REQ = 100;
     RecyclerView rvImages;
-    ImageView ivPdfListActivity;
     Button btnAddImages, btnConvert;
     PicturesAdapter picturesAdapter;
     ArrayList<Picture> picturesList;
@@ -59,13 +58,6 @@ public class MainActivity extends AppCompatActivity {
         init();
         setUpSwipe();
 
-        ivPdfListActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PdfListActivity.class));
-            }
-        });
-
         btnAddImages.setOnClickListener(v -> {
             Intent imagePick = new Intent(Intent.ACTION_PICK);
             imagePick.setType("image/*");
@@ -73,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(Intent.createChooser(imagePick, "Select Images"), IMAGE_PICK_REQ);
         });
 
-        // When convert button is clicked, show filename dialog and then create PDF via callback
         btnConvert.setOnClickListener(v -> {
             if (picturesList.isEmpty()) {
                 Toast.makeText(this, "No images to convert", Toast.LENGTH_SHORT).show();
@@ -82,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             pickFileName(fileName -> {
                 if (fileName == null) {
-                    return; // cancelled
+                    return;
                 }
                 String finalName = fileName.trim().isEmpty() ? "images" : fileName.trim();
                 new ConvertTask().execute(finalName);
@@ -102,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         picturesList = new ArrayList<>();
         btnConvert = findViewById(R.id.btnConvert);
         btnAddImages = findViewById(R.id.btnAddImages);
-        ivPdfListActivity = findViewById(R.id.ivPDFIcon);
         rvImages = findViewById(R.id.rvImages);
         progressIndicator = findViewById(R.id.progressIndicator);
 

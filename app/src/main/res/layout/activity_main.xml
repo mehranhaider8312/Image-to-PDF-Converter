@@ -25,18 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/title_background"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal"
             android:padding="20dp">
-
-            <ImageView
-                android:id="@+id/ivPDFIcon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="12dp"
-                android:contentDescription="@string/pdf_list_viewer_button"
-                android:src="@drawable/pdf"
-                app:tint="@color/title_text_color" />
 
             <TextView
                 android:id="@+id/tvTitleText"

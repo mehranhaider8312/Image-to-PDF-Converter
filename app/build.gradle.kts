@@ -42,5 +42,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
-    implementation("com.itextpdf:itextpdf:5.5.13.4")
-}
+    implementation("com.itextpdf:itextpdf:5.5.13.4") }

@@ -14,4 +14,6 @@
     <string name="remove_image">Remove image</string>
     <string name="pdf_opener_button">PDF opener button</string>
     <string name="pdf_list_viewer_button">PDF list Viewer button</string>
+    <string name="pdf_list">PDF List</string>
+    <string name="back_to_main_activity">Back to main activity</string>
 </resources>
